@@ -367,7 +367,7 @@ if(MODO === "CLUSTER" && cluster.isPrimary){
 }else{
     //express server
     const PORT = process.env.PORT || 8080
-    app.listen(PORT,()=>console.log(`Escuchando en puerto ${PORT}`))
+    const server = app.listen(PORT,()=>console.log(`Escuchando en puerto ${PORT}`))
 
 
 
