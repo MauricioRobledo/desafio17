@@ -25,7 +25,6 @@ import os from "os"
 import cluster from 'cluster';
 import { logger } from './logger.js';
 import compression from 'compression';
-import { prototype } from 'events';
 
 //CANTIDAD DE CPUS
 
