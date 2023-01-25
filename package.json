@@ -1,0 +1,46 @@
+{
+  "name": "entregable",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js",
+    "create-tables": "node src/scripts/createTables.js",
+    "node-cluster": "node src/server.js -p 8081 -m CLUSTER",
+    "forever-start": "forever start src/server.js -p 80081",
+    "babel": "babel ./src/server.js -o ./src/index.js",
+    "pm2-fork": "pm2 start src/index.js -i 0 -p 8081"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "bcrypt": "^5.1.0",
+    "child_process": "^1.0.2",
+    "compression": "^1.7.4",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-handlebars": "^6.0.5",
+    "express-session": "^1.17.3",
+    "forever": "^4.0.3",
+    "knex": "^2.3.0",
+    "log4js": "^6.7.1",
+    "mongoose": "^6.8.0",
+    "mysql": "^2.18.1",
+    "normalizr": "^3.6.2",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.5.3",
+    "sqlite3": "^5.1.2",
+    "yargs": "^17.6.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
