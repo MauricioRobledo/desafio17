@@ -25,6 +25,7 @@ import os from "os"
 import cluster from 'cluster';
 import { logger } from './logger.js';
 import compression from 'compression';
+import { prototype } from 'events';
 
 //CANTIDAD DE CPUS
 
@@ -366,8 +367,9 @@ if(MODO === "CLUSTER" && cluster.isPrimary){
     })
 }else{
     //express server
-    const server = app.listen(objArgumentos.p,()=>{
-        console.log(`Escuchando en puerto ${objArgumentos.p}`)
+    const PORT = process.env.PORT || 8080
+    const server = app.listen(PORT,()=>{
+        console.log(`Escuchando en puerto ${PORT}`)
     })
 
 

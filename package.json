@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src/server.js -p 80",
+    "start": "node src/server.js",
     "create-tables": "node src/scripts/createTables.js",
     "node-cluster": "node src/server.js -p 8081 -m CLUSTER",
     "forever-start": "forever start src/server.js -p 80081",
